@@ -1,0 +1,49 @@
+[
+	{
+		"title": "Arrays should be copied over",
+		"input": {
+			"newConfig": {
+				"apiKey": "",
+				"version": [6, 8, 10]
+			},
+			"oldConfig": {
+				"apiKey": "my api key"
+			}
+		},
+		"expected": {
+			"apiKey": "my api key",
+			"version": [6, 8, 10]
+		}
+	},
+	{
+		"title": "Arrays should not be checked",
+		"input": {
+			"newConfig": {
+				"apiKey": "",
+				"authors": [
+					{
+						"firstName": "",
+						"name": "",
+						"email": ""
+					}
+				]
+			},
+			"oldConfig": {
+				"apiKey": "my api key",
+				"authors": [
+					{
+						"firstName": "Sam"
+					}
+				]
+			}
+		},
+		"expected": {
+			"apiKey": "my api key",
+			"authors": [
+				{
+					"firstName": "Sam"
+				}
+			]
+		}
+	}
+]

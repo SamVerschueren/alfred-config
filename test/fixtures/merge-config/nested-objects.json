@@ -1,0 +1,54 @@
+[
+	{
+		"title": "Object should be copied over",
+		"input": {
+			"newConfig": {
+				"apiKey": "",
+				"author": {
+					"firstName": "",
+					"name": "",
+					"email": ""
+				}
+			},
+			"oldConfig": {
+				"apiKey": "my api key"
+			}
+		},
+		"expected": {
+			"apiKey": "my api key",
+			"author": {
+				"firstName": "",
+				"name": "",
+				"email": ""
+			}
+		}
+	},
+	{
+		"title": "Nested properties should be copied over",
+		"input": {
+			"newConfig": {
+				"apiKey": "",
+				"author": {
+					"firstName": "",
+					"name": "",
+					"email": ""
+				}
+			},
+			"oldConfig": {
+				"apiKey": "my api key",
+				"author": {
+					"firstName": "Sam",
+					"name": "Verschueren"
+				}
+			}
+		},
+		"expected": {
+			"apiKey": "my api key",
+			"author": {
+				"firstName": "Sam",
+				"name": "Verschueren",
+				"email": ""
+			}
+		}
+	}
+]

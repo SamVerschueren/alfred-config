@@ -1,0 +1,10 @@
+{
+	// GitHub API key
+	"apiKey": "1234",
+
+	// User information
+	"user": {
+		"name": "Sam Verschueren",
+		"email": "sam.verschueren@gmail.com"
+	}
+}

@@ -1,0 +1,35 @@
+[
+	{
+		"title": "Comments should be copied over",
+		"input": {
+			"newConfig": {
+				// Your personal GitHub API key
+				"apiKey": ""
+			},
+			"oldConfig": {
+				"apiKey": "my api key"
+			}
+		},
+		"expected": {
+			// Your personal GitHub API key
+			"apiKey": "my api key"
+		}
+	},
+	{
+		"title": "Comments should be overwritten",
+		"input": {
+			"newConfig": {
+				// Your personal GitHub API key
+				"apiKey": ""
+			},
+			"oldConfig": {
+				// My personal GitHub API key
+				"apiKey": "my api key"
+			}
+		},
+		"expected": {
+			// Your personal GitHub API key
+			"apiKey": "my api key"
+		}
+	}
+]

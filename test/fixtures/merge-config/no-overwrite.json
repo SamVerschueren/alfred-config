@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Existing key should not be overwritten",
+		"input": {
+			"newConfig": {
+				"apiKey": ""
+			},
+			"oldConfig": {
+				"apiKey": "my api key"
+			}
+		},
+		"expected": {
+			"apiKey": "my api key"
+		}
+	},
+	{
+		"title": "Existing key should not be overwritten and new keys should be copied",
+		"input": {
+			"newConfig": {
+				"apiKey": "",
+				"throttling": 10
+			},
+			"oldConfig": {
+				"apiKey": "my api key"
+			}
+		},
+		"expected": {
+			"apiKey": "my api key",
+			"throttling": 10
+		}
+	}
+]

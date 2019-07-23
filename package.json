@@ -1,0 +1,49 @@
+{
+	"name": "alfred-config",
+	"version": "0.0.0",
+	"description": "Allow easy user configurations for your Alfred workflows",
+	"license": "MIT",
+	"repository": "SamVerschueren/alred-config",
+	"author": {
+		"name": "Sam Verschueren",
+		"email": "sam.verschueren@gmail.com",
+		"url": "github.com/SamVerschueren"
+	},
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"cli.js",
+		"utils"
+	],
+	"keywords": [
+		"alfy",
+		"alfred",
+		"config",
+		"user",
+		"configuration",
+		"conf",
+		"workflow",
+		"workflows"
+	],
+	"dependencies": {
+		"dot-prop": "^5.1.0",
+		"execa": "^2.0.3",
+		"hjson": "^3.1.2",
+		"is-plain-obj": "^2.0.0",
+		"mkdirp": "^0.5.1",
+		"open-editor": "^2.0.1",
+		"path-exists": "^4.0.0",
+		"read-pkg-up": "^6.0.0",
+		"resolve-alfred-prefs": "^1.0.0"
+	},
+	"devDependencies": {
+		"ava": "^2.2.0",
+		"globby": "^10.0.1",
+		"xo": "^0.24.0"
+	}
+}

@@ -1,0 +1,17 @@
+[
+	{
+		"title": "Old properties should be removed",
+		"input": {
+			"newConfig": {
+				"apiKey": ""
+			},
+			"oldConfig": {
+				"apiKey": "my api key",
+				"throttling": 10
+			}
+		},
+		"expected": {
+			"apiKey": "my api key"
+		}
+	}
+]
