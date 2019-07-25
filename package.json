@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "Allow easy user configurations for your Alfred workflows",
 	"license": "MIT",
-	"repository": "SamVerschueren/alred-config",
+	"repository": "SamVerschueren/alfred-config",
 	"author": {
 		"name": "Sam Verschueren",
 		"email": "sam.verschueren@gmail.com",
