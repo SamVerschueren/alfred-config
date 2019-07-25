@@ -1,6 +1,6 @@
 {
 	"name": "alfred-config",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Allow easy user configurations for your Alfred workflows",
 	"license": "MIT",
 	"repository": "SamVerschueren/alred-config",
