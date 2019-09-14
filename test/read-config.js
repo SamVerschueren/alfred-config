@@ -3,7 +3,7 @@ import test from 'ava';
 import readConfig from '../utils/read-config';
 
 test('read config', t => {
-	const config = readConfig(path.join(__dirname, 'fixtures/config.json'));
+	const config = readConfig(path.join(__dirname, 'fixtures/user-config.json'));
 
 	t.deepEqual(config, {
 		apiKey: '1234',

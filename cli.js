@@ -3,16 +3,13 @@
 const fs = require('fs');
 const path = require('path');
 const pathExists = require('path-exists');
-const resolveAlfredPrefs = require('resolve-alfred-prefs');
-const readPkgUp = require('read-pkg-up');
 const mkdirp = require('mkdirp');
 const readConfig = require('./utils/read-config');
 const {merge} = require('./utils/merge-config');
 const textEditor = require('./utils/text-editor');
+const workflowData = require('./utils/workflow-data');
 
 const srcPath = path.join(process.cwd(), 'config.json');
-
-console.log(process.cwd());
 
 if (!pathExists.sync(srcPath)) {
 	// No `config.json` file found, gracefully exit because we don't need to merge
@@ -21,11 +18,10 @@ if (!pathExists.sync(srcPath)) {
 
 (async () => {
 	try {
-		const alfredPrefs = await resolveAlfredPrefs();
+		// Resolve the location of the workflow data
+		const workflowDataPath = await workflowData.resolvePath();
 
-		const {name} = readPkgUp.sync().package;
-
-		const destPath = path.join(path.dirname(alfredPrefs), 'Workflow Config', name, 'config.json');
+		const destPath = path.join(workflowDataPath, 'user-config.json');
 
 		// Read the current user workflow config and the original workflow config
 		const currentConfig = readConfig(destPath);

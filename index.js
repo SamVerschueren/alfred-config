@@ -1,21 +1,18 @@
 'use strict';
 const path = require('path');
 const dotProp = require('dot-prop');
-const readPkgUp = require('read-pkg-up');
 const readConfig = require('./utils/read-config');
 
 const getEnv = key => process.env[`alfred_${key}`] || '';
 
 class WorkflowConfig {
 	constructor(options) {
-		const {name} = readPkgUp.sync().package;
-
 		const opts = {
-			cwd: path.join(path.dirname(getEnv('preferences')), 'Workflow Config', name),
+			cwd: path.join(path.dirname(getEnv('workflow_data')), 'user'),
 			...options
 		};
 
-		const configFile = path.join(opts.cwd, 'config.json');
+		const configFile = path.join(opts.cwd, 'user-config.json');
 
 		this.store = readConfig(configFile);
 	}
