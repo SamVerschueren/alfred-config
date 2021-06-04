@@ -1,9 +1,9 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import test from 'ava';
-import * as globby from 'globby';
-import * as HJSON from '../utils/hjson';
-import {merge} from '../utils/merge-config';
+const fs = require('fs');
+const path = require('path');
+const test = require('ava');
+const globby = require('globby');
+const HJSON = require('../utils/hjson');
+const {merge} = require('../utils/merge-config');
 
 const dir = path.join(__dirname, 'fixtures/merge-config');
 

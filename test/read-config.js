@@ -1,6 +1,6 @@
-import * as path from 'path';
-import test from 'ava';
-import readConfig from '../utils/read-config';
+const path = require('path');
+const test = require('ava');
+const readConfig = require('../utils/read-config');
 
 test('read config', t => {
 	const config = readConfig(path.join(__dirname, 'fixtures/user-config.json'));

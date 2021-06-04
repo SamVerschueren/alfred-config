@@ -1,6 +1,6 @@
-import * as path from 'path';
-import test from 'ava';
-import WorkflowConfig from '..';
+const path = require('path');
+const test = require('ava');
+const WorkflowConfig = require('..');
 
 const config = new WorkflowConfig({
 	cwd: path.join(__dirname, 'fixtures')
