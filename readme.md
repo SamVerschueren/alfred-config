@@ -1,4 +1,4 @@
-# alfred-config [![Build Status](https://travis-ci.org/SamVerschueren/alfred-config.svg?branch=master)](https://travis-ci.org/SamVerschueren/alfred-config)
+# alfred-config ![Build Status](https://github.com/SamVerschueren/alfred-config/workflows/CI/badge.svg)
 
 > Allow easy user configurations for your [Alfred](https://www.alfredapp.com/) workflows
 
