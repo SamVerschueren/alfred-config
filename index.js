@@ -8,7 +8,7 @@ const getEnv = key => process.env[`alfred_${key}`] || '';
 class WorkflowConfig {
 	constructor(options) {
 		const opts = {
-			cwd: path.dirname(getEnv('workflow_data')),
+			cwd: getEnv('workflow_data'),
 			...options
 		};
 
