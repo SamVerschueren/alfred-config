@@ -9,6 +9,13 @@ const {merge} = require('./utils/merge-config');
 const textEditor = require('./utils/text-editor');
 const workflowData = require('./utils/workflow-data');
 
+const npmGlobal = process.env.npm_config_global;
+
+if (npmGlobal === '') {
+	// Prevent linking if the script was part of a non-global npm (install) command
+	process.exit(0);
+}
+
 const srcPath = path.join(process.cwd(), 'config.json');
 
 if (!pathExists.sync(srcPath)) {
